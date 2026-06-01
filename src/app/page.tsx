@@ -205,7 +205,7 @@ export default function Home() {
   }, [fieldFilter]);
 
   return (
-    <main className="min-h-screen overflow-hidden">
+    <main className="min-h-screen overflow-x-clip">
       <Header />
       <Hero />
       <QuickActions />
@@ -396,7 +396,10 @@ function QuickActions() {
 
 function RegistrationSection() {
   return (
-    <section id="registration" className="px-4 py-24 sm:px-6 lg:px-8">
+    <section
+      id="registration"
+      className="scroll-mt-24 px-4 py-24 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.18em] text-action">
@@ -459,7 +462,10 @@ function RegistrationSection() {
 
 function SeasonSection() {
   return (
-    <section id="season" className="px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="season"
+      className="scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl rounded-[2rem] bg-navy p-5 text-white shadow-[0_30px_90px_oklch(20%_0.04_253_/_0.2)] sm:p-8 lg:p-10">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
@@ -544,7 +550,10 @@ function FieldsSection({
   onFilterChange: (filter: FieldFilter) => void;
 }) {
   return (
-    <section id="fields" className="px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="fields"
+      className="scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
@@ -619,7 +628,10 @@ function StatusPill({ status }: { status: FieldStatus }) {
 
 function SponsorsSection() {
   return (
-    <section id="sponsors" className="px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="sponsors"
+      className="scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
           <p className="text-sm font-black uppercase tracking-[0.18em] text-action">
@@ -662,7 +674,10 @@ function SponsorsSection() {
 
 function VolunteerSection() {
   return (
-    <section id="volunteer" className="px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="volunteer"
+      className="scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl rounded-[2rem] bg-clay-soft p-6 sm:p-8 lg:p-10">
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
@@ -721,7 +736,7 @@ function FAQSection({
   onToggle: (question: string) => void;
 }) {
   return (
-    <section id="faq" className="px-4 py-20 sm:px-6 lg:px-8">
+    <section id="faq" className="scroll-mt-24 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.18em] text-action">
