@@ -38,10 +38,11 @@ type Division = {
   summary: string;
 };
 
-type SponsorTier = {
+type Sponsor = {
   name: string;
-  emphasis: string;
-  benefits: string[];
+  initials: string;
+  role: string;
+  message: string;
 };
 
 type FAQ = {
@@ -49,123 +50,143 @@ type FAQ = {
   answer: string;
 };
 
+type RegistrationLink = {
+  label: string;
+  href: string;
+};
+
+// Replace this with the league's direct PlayMetrics registration URL when supplied.
+const registrationLink: RegistrationLink = {
+  label: "Find registration in PlayMetrics",
+  href: "https://playmetrics.com/find-my-club",
+};
+
 const quickActions: QuickAction[] = [
   {
-    title: "Start registration",
-    description: "Send families to the approved league platform.",
-    href: "#platform",
+    title: "Register for spring",
+    description: "Sign up players ages 4-12 through PlayMetrics.",
+    href: "#registration",
     icon: "clipboard",
   },
   {
-    title: "Check field status",
-    description: "See what is open before driving across town.",
-    href: "#fields",
-    icon: "field",
-  },
-  {
-    title: "Find the schedule",
-    description: "Surface key dates and division links fast.",
+    title: "View the schedule",
+    description: "Find evaluations, team week, opening day, and picture day.",
     href: "#season",
     icon: "calendar",
   },
   {
-    title: "Support the league",
-    description: "Show sponsors where their support appears.",
-    href: "#sponsors",
-    icon: "sponsor",
+    title: "Check field status",
+    description: "See today's open, limited, and closed fields before you leave.",
+    href: "#fields",
+    icon: "field",
+  },
+  {
+    title: "Volunteer on game day",
+    description: "Coach, work the stand, help with fields, or join event setup.",
+    href: "#volunteer",
+    icon: "people",
   },
 ];
 
 const fields: Field[] = [
   {
-    name: "Memorial Field",
-    address: "123 Park Ave",
+    name: "Memorial Park Field 1",
+    address: "123 Park Avenue",
     status: "Open",
-    note: "Games on time",
+    note: "6:00 PM games are on",
   },
   {
-    name: "Pinewood Field",
-    address: "456 Pine St",
+    name: "Pinewood Practice Field",
+    address: "456 Pine Street",
     status: "Limited",
-    note: "Use batting cages only",
+    note: "Cages open, infield closed",
   },
   {
-    name: "Riverside Field",
-    address: "789 River Rd",
+    name: "Riverside Softball Field",
+    address: "789 River Road",
     status: "Closed",
-    note: "Infield drying",
+    note: "Standing water near first base",
   },
   {
-    name: "Northview Field",
-    address: "321 Northview Dr",
+    name: "Northview Field 2",
+    address: "321 Northview Drive",
     status: "Open",
-    note: "Practice slots available",
+    note: "Practice starts at 5:30 PM",
   },
 ];
 
 const seasonDates = [
-  { date: "Feb 12", label: "Registration opens" },
-  { date: "Mar 02", label: "Skills evaluations" },
-  { date: "Mar 18", label: "Coach meeting" },
-  { date: "Apr 06", label: "Opening weekend" },
+  { date: "Feb 12", label: "Spring registration opens" },
+  { date: "Mar 02", label: "Player evaluations" },
+  { date: "Mar 18", label: "Teams announced" },
+  { date: "Apr 06", label: "Opening day parade" },
+  { date: "May 11", label: "Picture day at Memorial Park" },
 ];
 
 const divisions: Division[] = [
   {
     name: "T-Ball",
     ages: "Ages 4-5",
-    summary: "First swings, soft instruction, and parent-friendly scheduling.",
+    summary: "First swings, short practices, and lots of parent help.",
+  },
+  {
+    name: "Rookies",
+    ages: "Ages 6-8",
+    summary: "Coach pitch games focused on confidence and fundamentals.",
   },
   {
     name: "Minors",
-    ages: "Ages 6-8",
-    summary: "Skill-building games with clear practice expectations.",
-  },
-  {
-    name: "Majors",
-    ages: "Ages 9-11",
-    summary: "Competitive play with teamwork and sportsmanship at the center.",
+    ages: "Ages 9-10",
+    summary: "Player pitch games with steady skill-building and teamwork.",
   },
   {
     name: "Softball",
-    ages: "Ages 6-12",
-    summary: "A dedicated path for players building confidence and game sense.",
+    ages: "Ages 7-12",
+    summary: "Fast-growing teams for players learning game sense and leadership.",
   },
 ];
 
-const sponsorTiers: SponsorTier[] = [
+const sponsors: Sponsor[] = [
   {
-    name: "Grand Slam",
-    emphasis: "Top site placement",
-    benefits: ["Homepage logo", "Sponsor spotlight", "Opening day recognition"],
+    name: "Riverfront Dental",
+    initials: "RD",
+    role: "Opening Day Sponsor",
+    message: "Helping every player start the season with a smile.",
   },
   {
-    name: "Home Run",
-    emphasis: "Season-long visibility",
-    benefits: ["Sponsor page listing", "Team mention", "Social-ready blurb"],
+    name: "Pine Street Market",
+    initials: "PM",
+    role: "Snack Stand Partner",
+    message: "Keeping families fueled between doubleheaders.",
   },
   {
-    name: "Community Partner",
-    emphasis: "Local support",
-    benefits: ["Directory listing", "Thank-you placement", "Board-approved copy"],
+    name: "Hometown Hardware",
+    initials: "HH",
+    role: "Field Crew Supporter",
+    message: "Backing the volunteers who keep the fields ready.",
   },
 ];
 
 const faqs: FAQ[] = [
   {
-    question: "Does this replace SportsConnect?",
+    question: "How do I register my player?",
     answer:
-      "No. The website gives families a clearer public starting point while official registration, volunteer records, and league operations stay in the approved platform.",
+      "Use the Register button to find the league in PlayMetrics. Official signups, waivers, and family account details stay in the approved league platform.",
   },
   {
-    question: "Can this adapt when PlayMetrics is ready?",
+    question: "Which division should my child play in?",
     answer:
-      "Yes. Platform links and parent instructions are kept in one place so the league can update the public path without rebuilding the whole site.",
+      "Start with your player's league age and experience level. If you are unsure, register for the closest division and a league coordinator will help place your player.",
   },
   {
-    question: "Can sponsors be shown safely during a screen share?",
+    question: "What happens when a field closes?",
     answer:
-      "Yes. The site can show recognition levels, logos, benefits, and contact steps while private planning details stay off screen.",
+      "Field status is updated here first. Coaches may also send team messages when a practice or game changes because of weather.",
+  },
+  {
+    question: "Can my business sponsor a team?",
+    answer:
+      "Yes. Local businesses can support teams, field care, equipment, and league events. Send a note to the sponsorship chair and the league will share current options directly.",
   },
 ];
 
@@ -188,7 +209,7 @@ export default function Home() {
       <Header />
       <Hero />
       <QuickActions />
-      <PlatformSection />
+      <RegistrationSection />
       <SeasonSection />
       <FieldsSection
         activeFilter={fieldFilter}
@@ -205,7 +226,8 @@ export default function Home() {
 
 function Header() {
   const navItems = [
-    { label: "Season", href: "#season" },
+    { label: "Register", href: "#registration" },
+    { label: "Schedule", href: "#season" },
     { label: "Fields", href: "#fields" },
     { label: "Sponsors", href: "#sponsors" },
     { label: "Volunteer", href: "#volunteer" },
@@ -215,16 +237,23 @@ function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-navy/95 text-white shadow-[0_18px_60px_oklch(20%_0.04_253_/_0.18)] backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a className="flex items-center gap-3" href="#top" aria-label="Home">
-          <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/25 bg-white/10 shadow-inner">
-            <Icon name="diamond" className="h-7 w-7 text-white" />
+        <a
+          className="flex items-center gap-2 sm:gap-3"
+          href="#top"
+          aria-label="Home"
+        >
+          <span className="grid h-10 w-10 place-items-center rounded-2xl border border-white/25 bg-white/10 shadow-inner sm:h-12 sm:w-12">
+            <Icon
+              name="diamond"
+              className="h-6 w-6 text-white sm:h-7 sm:w-7"
+            />
           </span>
           <span className="leading-none">
-            <span className="block font-display text-2xl tracking-[0.04em]">
+            <span className="block font-display text-xl tracking-[0.04em] sm:text-2xl">
               Hometown
             </span>
-            <span className="block text-xs font-extrabold uppercase tracking-[0.2em] text-red-200">
-              Youth Baseball
+            <span className="hidden text-xs font-extrabold uppercase tracking-[0.2em] text-red-200 sm:block">
+              Baseball & Softball
             </span>
           </span>
         </a>
@@ -243,7 +272,7 @@ function Header() {
 
         <a
           className="inline-flex min-h-11 items-center justify-center rounded-full bg-action px-5 text-sm font-extrabold text-white shadow-[0_10px_30px_oklch(46%_0.17_29_/_0.28)] transition hover:bg-action-dark"
-          href="#platform"
+          href="#registration"
         >
           Register
         </a>
@@ -254,7 +283,10 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="relative isolate min-h-[780px] bg-navy text-white">
+    <section
+      id="top"
+      className="relative isolate min-h-[720px] bg-navy text-white"
+    >
       <Image
         src="/images/youth-baseball-hero.png"
         alt="Youth baseball players warming up on a local field at sunset."
@@ -266,60 +298,65 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,oklch(20%_0.07_254_/_0.93)_0%,oklch(20%_0.07_254_/_0.76)_36%,oklch(20%_0.07_254_/_0.24)_68%,transparent_100%)]" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-44 bg-gradient-to-t from-background to-transparent" />
 
-      <div className="mx-auto grid max-w-7xl gap-16 px-4 pb-20 pt-20 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(360px,0.45fr)] lg:px-8 lg:pb-28 lg:pt-28">
+      <div className="mx-auto grid max-w-7xl gap-14 px-4 pb-20 pt-16 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(360px,0.45fr)] lg:px-8 lg:pb-28 lg:pt-28">
         <div className="max-w-3xl">
-          <h1 className="font-display text-[clamp(4.6rem,11vw,10rem)] leading-[0.78] tracking-[0.01em] text-white">
-            One clear home base for the season
+          <p className="mb-5 inline-flex rounded-full bg-white/14 px-4 py-2 text-sm font-black uppercase tracking-[0.14em] text-red-100">
+            Spring 2026 registration is open
+          </p>
+          <h1 className="font-display text-[clamp(3.6rem,12vw,9rem)] leading-[0.82] tracking-[0.01em] text-white">
+            Hometown Youth Baseball
           </h1>
           <p className="mt-8 max-w-2xl text-xl font-semibold leading-9 text-white/88 sm:text-2xl">
-            A parent-friendly public site that keeps registration in the
-            approved league platform and puts schedules, fields, sponsors, and
-            volunteer steps where families expect them.
+            Baseball and softball for local players ages 4-12. Find registration,
+            season dates, team updates, field status, and game-day volunteer
+            opportunities in one place.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               className="inline-flex min-h-14 items-center justify-center rounded-full bg-action px-7 text-base font-extrabold text-white shadow-[0_16px_40px_oklch(46%_0.17_29_/_0.35)] transition hover:-translate-y-0.5 hover:bg-action-dark"
-              href="#platform"
+              href="#registration"
             >
-              Preview registration path
+              Register for spring
             </a>
             <a
               className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/40 bg-white/12 px-7 text-base font-extrabold text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/18"
-              href="#fields"
+              href="#season"
             >
-              Check field status
+              View season calendar
             </a>
           </div>
         </div>
 
-        <aside className="self-end rounded-[2rem] border border-white/16 bg-navy/78 p-5 shadow-[0_24px_80px_oklch(13%_0.04_253_/_0.35)] backdrop-blur-md">
+        <aside className="hidden self-end rounded-[2rem] border border-white/16 bg-navy/78 p-5 shadow-[0_24px_80px_oklch(13%_0.04_253_/_0.35)] backdrop-blur-md lg:block">
           <div className="flex items-start gap-4">
             <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-field-soft text-field">
-              <Icon name="shield" className="h-7 w-7" />
+              <Icon name="megaphone" className="h-7 w-7" />
             </span>
             <div>
               <h2 className="text-lg font-black text-white">
-                Built around the approved platform
+                Tonight at the park
               </h2>
               <p className="mt-2 text-sm leading-6 text-white/78">
-                SportsConnect links can stay active now, with copy and link
-                paths ready to adjust as PlayMetrics comes online.
+                Field status was checked at 2:30 PM. Coaches will send team
+                messages if weather changes before first pitch.
               </p>
             </div>
           </div>
           <div className="mt-6 grid gap-3 text-sm font-bold">
-            {["No duplicate registration", "Field updates above the fold", "Sponsor recognition kept client-safe"].map(
-              (item) => (
-                <div
-                  className="flex items-center gap-3 rounded-2xl bg-white/8 px-4 py-3"
-                  key={item}
-                >
-                  <span className="h-2.5 w-2.5 rounded-full bg-field" />
-                  <span>{item}</span>
-                </div>
-              ),
-            )}
+            {[
+              "Rookies play at Memorial Park at 6:00 PM",
+              "Softball practice is on Field 2 at 5:30 PM",
+              "Snack stand opens 30 minutes before games",
+            ].map((item) => (
+              <div
+                className="flex items-center gap-3 rounded-2xl bg-white/8 px-4 py-3"
+                key={item}
+              >
+                <span className="h-2.5 w-2.5 rounded-full bg-field" />
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
         </aside>
       </div>
@@ -357,37 +394,48 @@ function QuickActions() {
   );
 }
 
-function PlatformSection() {
+function RegistrationSection() {
   return (
-    <section id="platform" className="px-4 py-24 sm:px-6 lg:px-8">
+    <section id="registration" className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.18em] text-action">
-            Platform strategy
+            Registration
           </p>
           <h2 className="mt-4 font-display text-6xl leading-[0.9] text-navy sm:text-7xl">
-            SportsConnect today. PlayMetrics ready later.
+            Spring signups are open.
           </h2>
           <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-muted">
-            The website becomes the public front door. Official registration,
-            volunteer records, and operations remain inside the approved league
-            platform.
+            New and returning families can register players, update contact
+            information, and review volunteer steps through PlayMetrics.
+          </p>
+          <a
+            className="mt-8 inline-flex min-h-14 items-center justify-center rounded-full bg-action px-7 text-base font-extrabold text-white shadow-[0_16px_40px_oklch(46%_0.17_29_/_0.22)] transition hover:-translate-y-0.5 hover:bg-action-dark"
+            href={registrationLink.href}
+            rel="noreferrer"
+            target="_blank"
+          >
+            {registrationLink.label}
+          </a>
+          <p className="mt-4 max-w-lg text-sm font-bold leading-6 text-muted">
+            Swap this fallback for the league&apos;s direct PlayMetrics
+            registration link when the board provides it.
           </p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
           {[
             {
-              title: "Public site",
-              copy: "Clear pages for families, sponsors, volunteers, and board contacts.",
+              title: "Who can play",
+              copy: "Programs are available for T-Ball, baseball, and softball players ages 4-12.",
             },
             {
-              title: "Approved platform",
-              copy: "Registration buttons route to the league system instead of creating a duplicate workflow.",
+              title: "What to have ready",
+              copy: "Player birth date, parent contact details, uniform sizes, and volunteer availability.",
             },
             {
-              title: "Transition layer",
-              copy: "Platform links and instructions can be updated as PlayMetrics integration progresses.",
+              title: "After signup",
+              copy: "Families receive evaluation times, team updates, and coach messages from the league.",
             },
           ].map((item, index) => (
             <article
@@ -416,14 +464,15 @@ function SeasonSection() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.18em] text-clay-soft">
-              Season hub
+              Season calendar
             </p>
             <h2 className="mt-4 font-display text-6xl leading-[0.9] sm:text-7xl">
-              What parents need, before they ask.
+              Mark the big dates now.
             </h2>
             <p className="mt-6 text-lg font-semibold leading-8 text-white/76">
-              Put dates, announcements, division details, and status updates in
-              one place so families stop hunting through old emails.
+              The spring season starts with evaluations, team announcements,
+              and opening day, then settles into weeknight practices and weekend
+              games.
             </p>
           </div>
 
@@ -454,11 +503,11 @@ function SeasonSection() {
                 <h3 className="text-lg font-black">Latest announcement</h3>
               </div>
               <p className="mt-5 text-2xl font-black leading-8">
-                Coaches meeting moves indoors
+                Opening day parade starts at 9:00 AM
               </p>
               <p className="mt-3 leading-7 text-navy/72">
-                All head coaches and assistants should check the board email
-                for the updated location and safe-sport reminders.
+                Players should arrive in uniform 20 minutes early. Teams will
+                line up behind the third-base dugout at Memorial Park.
               </p>
             </article>
           </div>
@@ -503,8 +552,12 @@ function FieldsSection({
               Field status
             </p>
             <h2 className="mt-4 font-display text-6xl leading-[0.9] text-navy sm:text-7xl">
-              Fewer texts. Faster field calls.
+              Today&apos;s field calls.
             </h2>
+            <p className="mt-5 max-w-2xl text-lg font-semibold leading-8 text-muted">
+              Check before you pack the car. Status updates are posted here
+              first, then coaches follow up with team-specific details.
+            </p>
           </div>
           <div className="flex flex-wrap gap-3">
             {fieldFilters.map((filter) => (
@@ -570,47 +623,35 @@ function SponsorsSection() {
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
           <p className="text-sm font-black uppercase tracking-[0.18em] text-action">
-            Sponsors
+            Community sponsors
           </p>
           <h2 className="mt-4 font-display text-6xl leading-[0.9] text-navy sm:text-7xl">
-            Make community support visible.
+            Thank you to the local businesses behind the season.
           </h2>
           <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-muted">
-            Sponsors can see where they appear while private planning details
-            stay out of the screen-share view.
+            Sponsor support helps with uniforms, field care, equipment, and
+            family events throughout the spring.
           </p>
         </div>
 
         <div className="grid gap-4">
-          {sponsorTiers.map((tier) => (
+          {sponsors.map((sponsor) => (
             <article
-              className="rounded-[1.5rem] border border-line bg-surface p-6 shadow-[0_18px_50px_oklch(20%_0.04_253_/_0.08)]"
-              key={tier.name}
+              className="grid gap-5 rounded-[1.5rem] border border-line bg-surface p-6 shadow-[0_18px_50px_oklch(20%_0.04_253_/_0.08)] sm:grid-cols-[96px_1fr]"
+              key={sponsor.name}
             >
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <h3 className="font-display text-5xl leading-none text-navy">
-                    {tier.name}
-                  </h3>
-                  <p className="mt-2 font-black text-action">
-                    {tier.emphasis}
-                  </p>
-                </div>
-                <span className="rounded-full bg-clay-soft px-4 py-2 text-sm font-black text-navy">
-                  Client-safe details
-                </span>
+              <div className="grid h-24 w-24 place-items-center rounded-[1.35rem] bg-clay-soft font-display text-5xl text-navy">
+                {sponsor.initials}
               </div>
-              <ul className="mt-6 grid gap-3 sm:grid-cols-3">
-                {tier.benefits.map((benefit) => (
-                  <li
-                    className="flex items-center gap-3 rounded-2xl bg-surface-strong px-4 py-3 text-sm font-extrabold text-navy"
-                    key={benefit}
-                  >
-                    <span className="h-2.5 w-2.5 rounded-full bg-field" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <p className="text-sm font-black uppercase tracking-[0.14em] text-action">
+                  {sponsor.role}
+                </p>
+                <h3 className="mt-2 font-display text-5xl leading-none text-navy">
+                  {sponsor.name}
+                </h3>
+                <p className="mt-4 leading-7 text-muted">{sponsor.message}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -626,28 +667,32 @@ function VolunteerSection() {
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.18em] text-action">
-              Volunteer flow
+              Volunteers
             </p>
             <h2 className="mt-4 font-display text-6xl leading-[0.9] text-navy sm:text-7xl">
-              The board should not have to explain every step twice.
+              Help make game day happen.
             </h2>
+            <p className="mt-5 text-lg font-semibold leading-8 text-navy/72">
+              Every family can help in a way that fits their schedule, from
+              coaching to field setup to a single snack stand shift.
+            </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {[
               {
                 icon: "people" as const,
-                title: "Coach or help",
-                copy: "Route interested parents to the right volunteer next step.",
+                title: "Coach a team",
+                copy: "Practice plans and age-group support help new coaches get started.",
               },
               {
                 icon: "mail" as const,
-                title: "Contact the board",
-                copy: "Make league contacts easy to find and easy to update.",
+                title: "Join a shift",
+                copy: "Pick a snack stand, scoreboard, or opening day slot that fits your week.",
               },
               {
                 icon: "shield" as const,
-                title: "Safe and clear",
-                copy: "Use approved background-check and safety language.",
+                title: "Complete safety steps",
+                copy: "Volunteer checks and training stay in the approved league process.",
               },
             ].map((item) => (
               <article
@@ -680,10 +725,10 @@ function FAQSection({
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.18em] text-action">
-            Parent-ready answers
+            Parent questions
           </p>
           <h2 className="mt-4 font-display text-6xl leading-[0.9] text-navy sm:text-7xl">
-            Plain language, not portal confusion.
+            Quick answers before first pitch.
           </h2>
         </div>
         <div className="space-y-4">
@@ -730,11 +775,11 @@ function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1fr_0.8fr_0.8fr]">
         <div>
           <p className="font-display text-4xl leading-none">
-            Hometown Youth Baseball
+            Hometown Youth Baseball & Softball
           </p>
           <p className="mt-4 max-w-md leading-7 text-white/70">
-            A cleaner public home for registration paths, season updates,
-            field status, sponsor recognition, and volunteer next steps.
+            Serving young players and families across Hometown, Pinewood,
+            Riverside, and Northview.
           </p>
         </div>
         <div>
@@ -742,24 +787,32 @@ function Footer() {
             Quick links
           </h2>
           <div className="mt-4 grid gap-3 text-white/75">
-            {["Season", "Fields", "Sponsors", "Volunteer", "FAQ"].map((item) => (
+            {[
+              { label: "Register", href: "#registration" },
+              { label: "Schedule", href: "#season" },
+              { label: "Fields", href: "#fields" },
+              { label: "Sponsors", href: "#sponsors" },
+              { label: "Volunteer", href: "#volunteer" },
+              { label: "FAQ", href: "#faq" },
+            ].map((item) => (
               <a
                 className="font-bold transition hover:text-white"
-                href={`#${item.toLowerCase()}`}
-                key={item}
+                href={item.href}
+                key={item.href}
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
         </div>
         <div>
           <h2 className="text-sm font-black uppercase tracking-[0.18em] text-clay-soft">
-            Platform note
+            Registration note
           </h2>
           <p className="mt-4 leading-7 text-white/75">
-            Registration and official league records remain powered by the
-            approved league platform.
+            Registration and official league records remain in PlayMetrics or
+            the approved league platform. This public site helps families find
+            the right next step.
           </p>
         </div>
       </div>

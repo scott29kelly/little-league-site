@@ -10,7 +10,7 @@ Parents need fast answers about registration, schedules, fields, volunteer expec
 
 ## Product Purpose
 
-This demo presents a polished public website for a youth baseball league. It should make the league feel organized, trustworthy, and easy to join while keeping official registration and compliance workflows inside SportsConnect or the approved successor platform.
+This demo presents a polished public website for a youth baseball league. It should make the league feel organized, trustworthy, and easy to join while keeping official registration and compliance workflows inside PlayMetrics or the approved league platform.
 
 ## Brand Personality
 

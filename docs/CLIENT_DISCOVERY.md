@@ -1,13 +1,13 @@
 # Client Discovery Questions
 
-Use these questions during the client call to identify whether the demo should become a SportsConnect front door, a transition-ready PlayMetrics support site, or a broader league communication hub.
+Use these questions during the client call to identify whether the demo should become a PlayMetrics front door, a SportsConnect transition support site, or a broader league communication hub.
 
 ## Current Setup
 
-- What parts of SportsConnect are working well today?
+- What parts of the current PlayMetrics or SportsConnect setup are working well today?
 - Where do parents currently get confused?
 - Who updates the website, registration links, schedules, and announcements?
-- Are schedules managed inside SportsConnect, another system, or manually?
+- Are schedules managed inside PlayMetrics, another system, or manually?
 - How do you currently communicate field closures?
 
 ## PlayMetrics Transition
@@ -26,7 +26,7 @@ Use these questions during the client call to identify whether the demo should b
 ## Board And Volunteer Workflow
 
 - Who should receive website inquiries?
-- Do volunteer signups need to route to SportsConnect, email, or a form?
+- Do volunteer signups need to route to PlayMetrics, email, or a form?
 - What background-check or safety language must appear publicly?
 - How often do board contacts change?
 

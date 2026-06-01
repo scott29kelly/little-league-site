@@ -16,9 +16,9 @@ const bodyFont = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Hometown Youth Baseball",
+  title: "Hometown Youth Baseball & Softball",
   description:
-    "A polished youth baseball website demo built around SportsConnect today and PlayMetrics readiness later.",
+    "Registration, schedules, field status, sponsors, and volunteer information for a local youth baseball and softball league.",
 };
 
 export default function RootLayout({

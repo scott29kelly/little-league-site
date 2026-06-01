@@ -2,7 +2,7 @@
 
 ## Goal
 
-Create a same-day website demo that shows how a youth baseball league can present a cleaner public experience while keeping official registration and compliance inside SportsConnect or the approved platform that replaces it.
+Create a same-day website demo that shows how a youth baseball league can present a cleaner public experience while keeping official registration and compliance inside PlayMetrics or the approved league platform.
 
 ## Audience
 
@@ -16,7 +16,7 @@ Create a same-day website demo that shows how a youth baseball league can presen
 - Use neutral placeholder branding until client-approved assets are available.
 - Make the registration path obvious without building a replacement registration system.
 - Show field status, season dates, announcements, divisions, sponsors, volunteer actions, and FAQs.
-- Include SportsConnect and PlayMetrics transition language in plain English.
+- Include PlayMetrics and SportsConnect transition language in plain English.
 - Keep all pricing and proposal numbers out of the app and documentation.
 - Stay deployable on Vercel.
 
@@ -35,4 +35,4 @@ Create a same-day website demo that shows how a youth baseball league can presen
 - Background-check processing.
 - Account login.
 - Official league data sync.
-- Any claim that the site replaces SportsConnect or PlayMetrics.
+- Any claim that the site replaces PlayMetrics.
