@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: oklch(97.8% 0.014 92);
+  --foreground: oklch(20% 0.04 253);
+  --surface: oklch(99% 0.008 92);
+  --surface-strong: oklch(94.5% 0.018 91);
+  --navy: oklch(24% 0.08 254);
+  --navy-soft: oklch(34% 0.075 254);
+  --red: oklch(55% 0.19 29);
+  --red-dark: oklch(46% 0.17 29);
+  --green: oklch(52% 0.13 145);
+  --green-soft: oklch(93% 0.055 145);
+  --clay: oklch(67% 0.11 58);
+  --clay-soft: oklch(90% 0.05 61);
+  --line: oklch(84% 0.018 92);
+  --muted: oklch(45% 0.03 253);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
+  --color-action: var(--red);
+  --color-action-dark: var(--red-dark);
+  --color-field: var(--green);
+  --color-field-soft: var(--green-soft);
+  --color-clay: var(--clay);
+  --color-clay-soft: var(--clay-soft);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 0%, oklch(92% 0.06 61 / 0.34), transparent 28rem),
+    linear-gradient(180deg, var(--background) 0%, oklch(96% 0.015 111) 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), "Segoe UI", system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid oklch(72% 0.16 85);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: oklch(85% 0.12 58);
+  color: var(--navy);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
 }

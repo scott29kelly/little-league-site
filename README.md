@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Little League Site Demo
 
-## Getting Started
+Client-safe demo for a youth baseball league website that works alongside SportsConnect today and the PlayMetrics transition path later.
 
-First, run the development server:
+The first goal is to show a polished public website experience for parents, sponsors, coaches, and board members without replacing the league's approved registration platform.
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Positioning
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- The public website should make league information easy for families to find.
+- Registration, background checks, and official league records should stay in the approved platform.
+- The demo uses neutral placeholder branding until the client provides exact league assets.
+- Pricing is intentionally omitted from the repository and demo pages so nothing sensitive appears during a client screen share.
 
-## Learn More
+## Demo Focus
 
-To learn more about Next.js, take a look at the following resources:
+- Parent actions: registration path, schedules, field status, announcements, FAQs.
+- Board operations: volunteer signups, sponsor visibility, contact routing, calendar clarity.
+- Transition readiness: keep SportsConnect links easy to update as PlayMetrics integration progresses.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Useful Docs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [PRD](docs/PRD.md)
+- [Client Discovery](docs/CLIENT_DISCOVERY.md)
+- [Offer Notes](docs/OFFER.md)
+- [Research Notes](docs/RESEARCH_NOTES.md)
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run lint
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+This project uses Next.js App Router and is intended to stay Vercel-compatible. It currently uses static content and local assets only.
