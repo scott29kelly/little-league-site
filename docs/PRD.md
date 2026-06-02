@@ -2,7 +2,7 @@
 
 ## Goal
 
-Create a same-day website demo that shows how a youth baseball league can present a cleaner public experience while keeping official registration and compliance inside PlayMetrics or the approved league platform.
+Create a website demo that shows how a youth baseball league can present a cleaner public experience while keeping official registration and compliance inside PlayMetrics or the approved league platform.
 
 ## Audience
 
