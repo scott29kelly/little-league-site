@@ -6,7 +6,7 @@ brand
 
 ## Users
 
-Parents need fast answers about registration, schedules, fields, volunteer expectations, and league updates. Board members need a public site they can confidently show to families and sponsors. Coaches and volunteers need clear next steps without digging through email threads.
+Parents need fast answers about registration, schedules, fields, league contacts, volunteer expectations, and league updates. Board members need a public site they can confidently show to families and sponsors. Coaches and volunteers need clear next steps without digging through email threads.
 
 ## Product Purpose
 
@@ -22,7 +22,7 @@ Avoid cluttered league portals, generic template card grids, official marks with
 
 ## Design Principles
 
-- Put parent tasks first: registration path, schedules, field locations, game-day updates, volunteer steps, and FAQs should be obvious.
+- Put parent tasks first: registration path, schedules, field locations, league contacts, game-day updates, volunteer steps, and FAQs should be obvious.
 - Show operational maturity: the site should make the league look organized without pretending to replace the approved platform.
 - Make sponsors feel valued: sponsor visibility should look credible and easy to explain.
 - Stay easy to update: content should be structured so names, dates, links, sponsors, photos, and fields can be swapped quickly.

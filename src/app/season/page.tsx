@@ -115,12 +115,13 @@ function DivisionSection() {
             </h2>
             <p className="mt-5 max-w-2xl text-lg font-semibold leading-8 text-muted">
               Division placement depends on league age, experience, and final
-              roster needs.
+              roster needs. Team schedules are confirmed by coaches, with
+              travel tryout details announced by league email and Facebook.
             </p>
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {divisions.map((division) => (
             <article
               className="rounded-[1.25rem] border border-line bg-surface p-5 shadow-[0_14px_35px_oklch(20%_0.04_253_/_0.08)]"
@@ -132,6 +133,12 @@ function DivisionSection() {
               <p className="mt-1 text-sm font-black uppercase tracking-[0.12em] text-action">
                 {division.ages}
               </p>
+              {division.practices || division.games ? (
+                <div className="mt-4 grid gap-2 text-sm font-extrabold text-navy/78">
+                  {division.practices ? <p>{division.practices}</p> : null}
+                  {division.games ? <p>{division.games}</p> : null}
+                </div>
+              ) : null}
               <p className="mt-4 leading-7 text-muted">{division.summary}</p>
             </article>
           ))}
@@ -177,9 +184,29 @@ function FieldLocationsSection() {
                 {field.address}
               </p>
               <p className="mt-4 leading-7 text-muted">{field.details}</p>
+              {field.fields ? (
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {field.fields.map((fieldName) => (
+                    <span
+                      className="rounded-full bg-field-soft px-3 py-1 text-xs font-black uppercase tracking-[0.1em] text-field"
+                      key={`${field.name}-${fieldName}`}
+                    >
+                      {fieldName}
+                    </span>
+                  ))}
+                </div>
+              ) : null}
               <p className="mt-5 rounded-2xl bg-surface-strong px-4 py-3 text-sm font-extrabold leading-6 text-navy">
                 {field.parking}
               </p>
+              <a
+                className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-action px-5 text-sm font-extrabold text-white transition hover:bg-action-dark"
+                href={field.mapHref}
+                rel="noreferrer"
+                target="_blank"
+              >
+                Open map
+              </a>
             </article>
           ))}
         </div>

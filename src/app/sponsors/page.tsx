@@ -103,13 +103,19 @@ function SponsorsSection() {
               target="_blank"
             >
               <div className="relative h-24 w-28 overflow-hidden rounded-[1.1rem] bg-white p-3">
-                <Image
-                  alt={`${sponsor.name} logo`}
-                  className="object-contain p-3"
-                  fill
-                  sizes="112px"
-                  src={sponsor.logoSrc}
-                />
+                {sponsor.logoSrc ? (
+                  <Image
+                    alt={`${sponsor.name} logo`}
+                    className="object-contain p-3"
+                    fill
+                    sizes="112px"
+                    src={sponsor.logoSrc}
+                  />
+                ) : (
+                  <span className="flex h-full items-center justify-center text-center text-sm font-black uppercase leading-5 tracking-[0.12em] text-navy">
+                    {sponsor.name}
+                  </span>
+                )}
               </div>
               <div>
                 <p className="text-sm font-black uppercase tracking-[0.14em] text-action">

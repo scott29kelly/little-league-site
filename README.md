@@ -22,8 +22,8 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Demo Focus
 
-- Parent actions: homepage overview, Sports Connect registration path, schedule and fields, game-day update, photo gallery, sponsors, volunteer information, FAQs.
-- Board operations: volunteer signups, sponsor visibility, contact routing, calendar clarity.
+- Parent actions: homepage overview, Sports Connect registration path, schedule and fields, About page, game-day update, photo gallery, sponsors, volunteer information, FAQs.
+- Board operations: volunteer signups, sponsor visibility, contact routing, calendar clarity, and public role clarity.
 - Transition readiness: keep Sports Connect links and transition copy easy to update when the league confirms final wording.
 
 ## Useful Docs

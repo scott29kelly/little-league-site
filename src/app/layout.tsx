@@ -18,7 +18,7 @@ const bodyFont = Nunito_Sans({
 export const metadata: Metadata = {
   title: "Middletown-Neshaminy Baseball",
   description:
-    "Registration, schedules, field locations, sponsors, volunteer details, and family updates for Middletown-Neshaminy Baseball.",
+    "Registration, schedules, field locations, league contacts, sponsors, volunteer details, and family updates for Middletown-Neshaminy Baseball.",
 };
 
 export default function RootLayout({

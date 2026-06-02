@@ -8,9 +8,12 @@ import {
   galleryPhotos,
   gameDayNotice,
   leagueName,
+  leagueMission,
   leagueTagline,
+  leagueUpdates,
   quickActions,
   registrationLink,
+  registrationStatus,
   seasonDates,
   sponsorInquiryHref,
 } from "./_data/league-content";
@@ -21,6 +24,7 @@ export default function Home() {
       <SiteHeader />
       <Hero />
       <QuickActions />
+      <LeagueUpdates />
       <TodayNotice />
       <SeasonPreview />
       <HomeGalleryPreview />
@@ -50,7 +54,7 @@ function Hero() {
       <div className="mx-auto grid max-w-7xl gap-12 px-4 pb-20 pt-16 sm:px-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(340px,0.4fr)] lg:px-8 lg:pb-28 lg:pt-28">
         <div className="max-w-3xl">
           <p className="mb-5 inline-flex rounded-full bg-white/14 px-4 py-2 text-sm font-black uppercase tracking-[0.14em] text-red-100">
-            Spring baseball registration is open
+            {registrationStatus}
           </p>
           <h1 className="font-display text-[clamp(3.4rem,10vw,8rem)] leading-[0.84] tracking-[0.01em] text-white">
             {leagueName}
@@ -97,6 +101,76 @@ function Hero() {
             </div>
           </div>
         </aside>
+      </div>
+    </section>
+  );
+}
+
+function LeagueUpdates() {
+  return (
+    <section className="px-4 pt-20 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+        <div>
+          <p className="text-sm font-black uppercase tracking-[0.18em] text-action">
+            League updates
+          </p>
+          <h2 className="mt-4 font-display text-6xl leading-[0.9] text-navy sm:text-7xl">
+            What families need now.
+          </h2>
+          <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-muted">
+            {leagueMission}
+          </p>
+        </div>
+        <div className="grid gap-4">
+          {leagueUpdates.map((update) => {
+            const cardContent = (
+              <>
+                <p className="text-sm font-black uppercase tracking-[0.16em] text-action">
+                  {update.label}
+                </p>
+                <h3 className="mt-2 text-2xl font-black text-navy">
+                  {update.title}
+                </h3>
+                <p className="mt-3 leading-7 text-muted">{update.copy}</p>
+              </>
+            );
+
+            if (update.href && update.isExternal) {
+              return (
+                <a
+                  className="rounded-[1.25rem] border border-line bg-surface p-6 shadow-[0_16px_45px_oklch(20%_0.04_253_/_0.08)] transition hover:-translate-y-1"
+                  href={update.href}
+                  key={update.title}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {cardContent}
+                </a>
+              );
+            }
+
+            if (update.href) {
+              return (
+                <Link
+                  className="rounded-[1.25rem] border border-line bg-surface p-6 shadow-[0_16px_45px_oklch(20%_0.04_253_/_0.08)] transition hover:-translate-y-1"
+                  href={update.href}
+                  key={update.title}
+                >
+                  {cardContent}
+                </Link>
+              );
+            }
+
+            return (
+              <article
+                className="rounded-[1.25rem] border border-line bg-surface p-6 shadow-[0_16px_45px_oklch(20%_0.04_253_/_0.08)]"
+                key={update.title}
+              >
+                {cardContent}
+              </article>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

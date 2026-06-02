@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Sponsor } from "../_data/league-content";
 import { sponsors } from "../_data/league-content";
 
 type SponsorLogoCloudProps = {
@@ -9,6 +10,10 @@ export function SponsorLogoCloud({
   variant = "feature",
 }: SponsorLogoCloudProps) {
   const isCompact = variant === "compact";
+  const logoSponsors = sponsors.filter(
+    (sponsor): sponsor is Sponsor & { logoSrc: string } =>
+      Boolean(sponsor.logoSrc),
+  );
 
   return (
     <div
@@ -18,7 +23,7 @@ export function SponsorLogoCloud({
           : "grid gap-4 md:grid-cols-2 xl:grid-cols-4"
       }
     >
-      {sponsors.map((sponsor) => (
+      {logoSponsors.map((sponsor) => (
         <a
           aria-label={`Visit ${sponsor.name}`}
           className={`group grid place-items-center rounded-[1.35rem] border border-line bg-white p-4 transition hover:-translate-y-1 hover:border-navy/20 ${

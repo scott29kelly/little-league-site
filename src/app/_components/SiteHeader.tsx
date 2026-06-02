@@ -21,7 +21,7 @@ export function SiteHeader() {
               className="object-contain"
               fill
               sizes="64px"
-              src="/images/middletown-neshaminy-logo.svg"
+              src="/images/middletown-neshaminy-logo.png"
             />
           </span>
           <span className="min-w-0 leading-none">

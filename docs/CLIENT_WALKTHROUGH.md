@@ -7,7 +7,7 @@ Use this as a short screen-share path for the Middletown-Neshaminy Baseball demo
 - Confirm the league name, sponsor logos, direct Sports Connect link, field names, and public contact email.
 - Confirm final division names and field addresses before production use.
 - Keep pricing, sponsor fees, and proposal numbers out of the browser window.
-- Open the homepage and keep `/registration`, `/season`, `/gallery`, and `/sponsors` ready in nearby tabs.
+- Open the homepage and keep `/registration`, `/season`, `/about`, `/gallery`, and `/sponsors` ready in nearby tabs.
 - Be clear that the homepage game-day notice is a simple admin-updated message, not a live field-availability system.
 
 ## Opening Positioning
@@ -28,15 +28,18 @@ Use this as a short screen-share path for the Middletown-Neshaminy Baseball demo
 4. Open schedule and fields.
    "This page combines season milestones, divisions, and field-location details. It avoids pretending the website can make field-use decisions across different locations."
 
-5. Show the photo gallery.
+5. Open about.
+   "The About page gives families the league mission, service area, public board contacts, and the right contact links."
+
+6. Show the photo gallery.
    "The homepage previews a few photos, and the full gallery has a dedicated page. Final photos should be league-approved and avoid private child details."
 
-6. Open sponsors.
+7. Open sponsors.
    "Sponsor recognition and volunteer opportunities are grouped under a clear Sponsors page so families and local businesses know where to go."
 
-7. End on FAQ and footer.
+8. End on FAQ and footer.
    "The FAQ answers parent questions, and the footer keeps registration, contact, sponsor, and field links easy to find."
 
 ## Closing Ask
 
-"The next useful step is to confirm the public-safe details: final division names, field addresses, season dates, photo policy, sponsor approvals, and the best public contact email."
+"The next useful step is to confirm the public-safe details: final season dates, photo policy, sponsor approvals, board contacts, and the best public contact email."

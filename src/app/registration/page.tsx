@@ -7,6 +7,7 @@ import {
   divisions,
   registrationCards,
   registrationLink,
+  registrationStatus,
   registrationSteps,
 } from "../_data/league-content";
 
@@ -37,12 +38,12 @@ function RegistrationHero() {
             Registration
           </p>
           <h1 className="mt-4 font-display text-7xl leading-[0.85] text-white sm:text-8xl lg:text-9xl">
-            Spring signups start here.
+            Register through Sports Connect.
           </h1>
           <p className="mt-6 max-w-2xl text-lg font-semibold leading-8 text-white/78 sm:text-xl">
-            This page helps families understand who can play, what to have
-            ready, and where the official registration process continues.
-            Player signups and records stay in Sports Connect.
+            {registrationStatus} This page helps families understand who can
+            play, what to have ready, and where the official registration
+            process continues.
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <a
@@ -156,7 +157,7 @@ function DivisionGuide() {
               registration.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {divisions.map((division) => (
               <article
                 className="rounded-[1.35rem] bg-surface p-5 shadow-[0_14px_35px_oklch(20%_0.04_253_/_0.08)]"
@@ -168,6 +169,12 @@ function DivisionGuide() {
                 <p className="mt-1 text-sm font-black uppercase tracking-[0.12em] text-action">
                   {division.ages}
                 </p>
+                {division.practices || division.games ? (
+                  <div className="mt-4 grid gap-2 text-sm font-extrabold text-navy/78">
+                    {division.practices ? <p>{division.practices}</p> : null}
+                    {division.games ? <p>{division.games}</p> : null}
+                  </div>
+                ) : null}
                 <p className="mt-4 leading-7 text-muted">
                   {division.summary}
                 </p>
