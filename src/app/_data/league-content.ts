@@ -66,6 +66,12 @@ export type Sponsor = {
   isPresenting?: boolean;
 };
 
+export type SponsorOpportunity = {
+  title: string;
+  copy: string;
+  icon: IconName;
+};
+
 export type GalleryPhoto = {
   title: string;
   caption: string;
@@ -157,7 +163,7 @@ export const registrationStatus =
   "2026 travel baseball registration is open in Sports Connect.";
 
 export const gameDayNotice: GameDayNotice = {
-  status: "Today's games are on as scheduled",
+  status: "This week's games are on as scheduled",
   updatedAt: "Updated today at 2:15 PM",
   note: "If weather changes, coaches will send team-specific updates.",
 };
@@ -202,7 +208,7 @@ export const quickActions: QuickAction[] = [
   },
   {
     title: "Game-day update",
-    description: "Check whether today's games are still scheduled.",
+    description: "Check whether this week's games are still scheduled.",
     href: "/#today",
     icon: "megaphone",
   },
@@ -376,41 +382,112 @@ export const fieldLocations: FieldLocation[] = [
 
 export const sponsors: Sponsor[] = [
   {
+    name: "Fred Beans Ford Langhorne",
+    href: "https://www.fredbeansfordlanghorne.com/",
+    logoSrc: "/images/sponsor-fred-beans-ford-langhorne.png",
+    role: "Platinum sponsor",
+    message: "Helping local players and volunteers keep the season moving.",
+    isPresenting: true,
+  },
+  {
+    name: "Brian Fitzpatrick One Community",
+    href: "https://fitzpatrick.house.gov/",
+    logoSrc: "/images/sponsor-brian-fitzpatrick.png",
+    role: "Platinum sponsor",
+    message: "Recognizing the families and volunteers behind the league.",
+    isPresenting: true,
+  },
+  {
+    name: "McHale's",
+    href: "https://mchales.net/",
+    logoSrc: "/images/sponsor-mchales-full.jpg",
+    role: "Platinum sponsor",
+    message: "Helping make game day possible for players and families.",
+    isPresenting: true,
+  },
+  {
     name: "A&E Lawns Inc.",
     href: "https://www.aelawnsinc.com/",
-    role: "Community sponsor",
+    logoSrc: "/images/sponsor-ae-lawns.png",
+    role: "MVP sponsor",
     message: "Supporting fields, families, and local youth sports.",
-    isPresenting: true,
+  },
+  {
+    name: "Dairy Delite Woodbourne",
+    href: "https://www.facebook.com/profile.php?id=100066367496521",
+    logoSrc: "/images/sponsor-dairy-delite.jpg",
+    role: "MVP sponsor",
+    message: "Backing the community traditions that make game day special.",
   },
   {
     name: "Diana R Delivers",
     href: "http://www.dianardelivers.com/",
-    role: "Community sponsor",
+    logoSrc: "/images/sponsor-diana-r-delivers.jpg",
+    role: "MVP sponsor",
     message: "Helping keep the season active for players and families.",
   },
   {
     name: "Mawson and Mawson",
     href: "https://www.mawsonandmawson.com/",
-    role: "Community sponsor",
+    logoSrc: "/images/sponsor-mawson-and-mawson.png",
+    role: "MVP sponsor",
     message: "Supporting the volunteer effort behind local baseball.",
   },
   {
     name: "Neshaminy Kids Club",
     href: "https://neshaminykids.org/",
-    role: "Community sponsor",
+    logoSrc: "/images/sponsor-neshaminy-kids-club.png",
+    role: "MVP sponsor",
     message: "Backing youth programs and community connection.",
   },
   {
     name: "Revere Restaurant",
     href: "https://revererestaurant.com/",
-    role: "Community sponsor",
+    logoSrc: "/images/sponsor-revere-restaurant.png",
+    role: "MVP sponsor",
     message: "Supporting local families on and off the field.",
   },
   {
     name: "Verder Scientific",
     href: "https://www.verder-scientific.com/",
-    role: "Community sponsor",
+    logoSrc: "/images/sponsor-verder-scientific.jpg",
+    role: "MVP sponsor",
     message: "Helping create a stronger season for players and volunteers.",
+  },
+  {
+    name: "Patient First",
+    href: "https://www.patientfirst.com/locations/eastern-pennsylvania/langhorne",
+    logoSrc: "/images/sponsor-patient-first.jpg",
+    role: "Community sponsor",
+    message: "Supporting youth athletics and local families.",
+  },
+  {
+    name: "Nailed It 2 Cabinets",
+    href: "https://nailedit2cabinets.com/",
+    logoSrc: "/images/sponsor-nailed-it-2-cabinets.jpg",
+    role: "Community sponsor",
+    message: "Helping strengthen local programs and community pride.",
+  },
+  {
+    name: "Trash Daddy",
+    href: "https://trashdaddy.net/home/",
+    logoSrc: "/images/sponsor-trash-daddy.jpg",
+    role: "Community sponsor",
+    message: "Supporting the local game-day experience.",
+  },
+  {
+    name: "Chick-fil-A Oxford Valley Rd",
+    href: "https://www.cfaoxfordvalleyroad.com/",
+    logoSrc: "/images/sponsor-chick-fil-a-full.jpg",
+    role: "Community sponsor",
+    message: "Backing the local game-day experience.",
+  },
+  {
+    name: "Rep. Joe Hogan",
+    href: "https://rephogan.com/",
+    logoSrc: "/images/sponsor-joe-hogan.png",
+    role: "Community sponsor",
+    message: "Recognizing Middletown athletes and community sports.",
   },
   {
     name: "Dougherty Funeral Home",
@@ -419,30 +496,34 @@ export const sponsors: Sponsor[] = [
     role: "Community sponsor",
     message: "Supporting local families and league traditions.",
   },
-  {
-    name: "McHale's",
-    href: "https://mchales.net/",
-    logoSrc: "/images/sponsor-mchales.png",
-    role: "Community sponsor",
-    message: "Helping make game day possible for players and families.",
-  },
-  {
-    name: "Rep. Brian Fitzpatrick",
-    href: "https://fitzpatrick.house.gov/",
-    logoSrc: "/images/sponsor-fitzpatrick.png",
-    role: "Community sponsor",
-    message: "Recognizing the volunteers and families behind the season.",
-  },
-  {
-    name: "Chick-fil-A Oxford Valley Rd",
-    href: "https://www.cfaoxfordvalleyroad.com/",
-    logoSrc: "/images/sponsor-chick-fil-a.png",
-    role: "Community sponsor",
-    message: "Backing the local game-day experience.",
-  },
 ];
 
 export const sponsorInquiryHref = `mailto:${associationContactEmail}?subject=Middletown-Neshaminy%20Baseball%20sponsor%20inquiry`;
+export const sponsorOpportunityFormHref =
+  "https://dt5602vnjxv0c.cloudfront.net/portals/83299/docs/2025%20maa%20sponsorship%20opportunities.pdf";
+
+export const sponsorRecognitionOptions: SponsorOpportunity[] = [
+  {
+    title: "Field banner recognition",
+    copy: "Display a customized banner at the MAA field complex for families and visiting teams to see during the season.",
+    icon: "field",
+  },
+  {
+    title: "Team sponsorship recognition",
+    copy: "Support a league team with sponsor recognition connected to player uniforms and team communication.",
+    icon: "people",
+  },
+  {
+    title: "Website and social recognition",
+    copy: "Give local businesses visibility through the public website and league social channels.",
+    icon: "megaphone",
+  },
+  {
+    title: "Event and game-day support",
+    copy: "Help underwrite community events, special game days, snack stand activity, and field-day needs.",
+    icon: "calendar",
+  },
+];
 
 export const galleryPhotos: GalleryPhoto[] = [
   {

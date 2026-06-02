@@ -51,6 +51,8 @@ Useful public details pulled into the demo:
 - Public Facebook About page lists the MAA registration email and service area.
 - Public board page lists baseball board and operations contacts.
 - Public sponsor pages list community sponsors and sponsor-recognition options.
+- Current sponsor sources identify Platinum, MVP, and community sponsors. The demo uses locally saved sponsor logos from the public sponsor pages and links sponsors to public business or representative sites when available.
+- Sponsorship recognition options include field banners, team recognition, website/social recognition, and event or game-day support.
 
 Details intentionally not copied:
 
@@ -67,6 +69,9 @@ Details intentionally not copied:
 - [MAA Facebook page](https://www.facebook.com/MiddletownAA)
 - [Sports Connect Little League page](https://sportsconnect.com/little-league/)
 - [Little League local website policy](https://www.littleleague.org/playing-rules/position-policy-statements/websites/)
+- [MAA sponsorship opportunities](https://leagues.bluesombrero.com/Default.aspx?tabid=2112918)
+- [Current sponsor listing](https://leagues.bluesombrero.com/Default.aspx?tabid=2113123)
+- [MAA downloadable sponsorship form](https://dt5602vnjxv0c.cloudfront.net/portals/83299/docs/2025%20maa%20sponsorship%20opportunities.pdf)
 
 ## Product Implication
 
