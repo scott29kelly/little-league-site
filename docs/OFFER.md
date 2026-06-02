@@ -4,20 +4,20 @@ This document keeps the offer structure client-safe. Do not add pricing numbers 
 
 ## Recommended Positioning
 
-Lead with a clear public website that helps families, coaches, volunteers, and sponsors. The site should reduce repeated questions for the board and make the league feel organized before the season starts.
+Lead with a clear public website that helps Middletown-Neshaminy Baseball families, coaches, volunteers, and sponsors. The site should reduce repeated questions and make the league easier to use before and during the season.
 
 ## Service Shape
 
 - Initial setup for the public website and content structure.
-- Ongoing monthly support for announcements, schedule updates, sponsor changes, volunteer messaging, and platform-link changes.
-- PlayMetrics public front door, with SportsConnect transition support where needed.
-- Optional sponsor visibility system that can help the league explain website and community recognition.
+- Ongoing support for announcements, game-day notices, schedule updates, sponsor changes, volunteer messaging, gallery curation, and platform-link changes.
+- Sports Connect public front door, with platform-link updates where needed.
+- Sponsor visibility system that keeps recognition useful without turning the site into an ad page.
 
 ## Sales Framing
 
-- "We are not replacing PlayMetrics. We are making the public-facing experience clearer."
+- "We are not replacing Sports Connect. We are making the public-facing experience clearer."
 - "Families get one clean place to start, while official registration stays in the approved platform."
-- "The site can be maintained through the season so board members are not stuck making urgent updates."
+- "The site can be maintained through the season so urgent updates are easier to publish."
 - "Sponsor recognition can help the league turn the website into a community asset."
 
 ## Client-Safe Demo Rule

@@ -2,21 +2,21 @@
 
 ## Goal
 
-Create a website demo that shows how a youth baseball league can present a cleaner public experience while keeping official registration and compliance inside PlayMetrics or the approved league platform.
+Create a website demo that shows how Middletown-Neshaminy Baseball can present a cleaner public experience while keeping official registration and compliance inside Sports Connect.
 
 ## Audience
 
-- Parents looking for registration, schedules, field status, and answers.
+- Parents looking for registration, schedules, field locations, game-day updates, photos, and answers.
 - Board members who need a professional public site that is easy to explain.
 - Coaches and volunteers who need clear next steps.
 - Local sponsors who need visible community recognition.
 
 ## Demo Requirements
 
-- Use neutral placeholder branding until client-approved assets are available.
+- Use the league name, direct Sports Connect registration link, field names, sponsor names, and realistic placeholder photos.
 - Make the registration path obvious without building a replacement registration system.
-- Show field status, season dates, announcements, divisions, sponsors, volunteer actions, and FAQs.
-- Include PlayMetrics and SportsConnect transition language in plain English.
+- Show a homepage game-day notice, an example season timeline, divisions, field locations, sponsors, volunteer actions, FAQs, and a photo gallery.
+- Label timeline dates and division names clearly when they are placeholders that need board confirmation.
 - Keep all pricing and proposal numbers out of the app and documentation.
 - Stay deployable on Vercel.
 
@@ -24,9 +24,9 @@ Create a website demo that shows how a youth baseball league can present a clean
 
 - A client can understand the recommended website strategy in under two minutes.
 - Parents can identify the next action from the first viewport.
-- The board can see how the site reduces repeated questions.
+- The league can see how the site reduces repeated questions.
 - Sponsor visibility is easy to understand without showing dollar amounts.
-- The site can be quickly rebranded after the client provides real league details.
+- The site can be quickly adjusted after the client confirms final league details.
 
 ## Out Of Scope For The Demo
 
@@ -35,4 +35,5 @@ Create a website demo that shows how a youth baseball league can present a clean
 - Background-check processing.
 - Account login.
 - Official league data sync.
-- Any claim that the site replaces PlayMetrics.
+- Public or parent photo uploads.
+- Any claim that the site replaces Sports Connect.

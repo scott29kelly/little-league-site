@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 210" role="img" aria-label="Middletown-Neshaminy Baseball logo">
+  <path d="M23 18h73l14 36 14-36h73v94l-87 82-87-82Z" fill="#fff"/>
+  <path d="M23 18h73l14 36 14-36h73v94l-87 82-87-82Z" fill="none" stroke="#e32d22" stroke-width="16" stroke-miterlimit="10"/>
+  <path d="M110 54 124 18h73v94l-87 82Z" fill="none" stroke="#17128a" stroke-width="16" stroke-miterlimit="10"/>
+  <path d="M45 51h38l27 75 27-75h38v102h-28V83l-31 88H94L66 84v69H45Z" fill="#17128a"/>
+  <path d="M121 51h36l33 76V51h27v102h-35l-34-76v76h-27Z" fill="#e32d22" transform="translate(-22 0)"/>
+</svg>

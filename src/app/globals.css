@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: oklch(97.8% 0.014 92);
+  --background: oklch(98% 0.012 88);
   --foreground: oklch(20% 0.04 253);
   --surface: oklch(99% 0.008 92);
-  --surface-strong: oklch(94.5% 0.018 91);
-  --navy: oklch(24% 0.08 254);
-  --navy-soft: oklch(34% 0.075 254);
-  --red: oklch(55% 0.19 29);
-  --red-dark: oklch(46% 0.17 29);
+  --surface-strong: oklch(95% 0.018 91);
+  --navy: oklch(25% 0.105 257);
+  --navy-soft: oklch(36% 0.095 257);
+  --red: oklch(55% 0.2 25);
+  --red-dark: oklch(46% 0.18 25);
   --green: oklch(52% 0.13 145);
   --green-soft: oklch(93% 0.055 145);
   --clay: oklch(67% 0.11 58);
@@ -64,6 +64,15 @@ a:focus-visible,
 summary:focus-visible {
   outline: 3px solid oklch(72% 0.16 85);
   outline-offset: 4px;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 
 ::selection {

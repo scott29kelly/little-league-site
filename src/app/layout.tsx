@@ -16,9 +16,9 @@ const bodyFont = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Hometown Youth Baseball & Softball",
+  title: "Middletown-Neshaminy Baseball",
   description:
-    "Registration, schedules, field status, sponsors, and volunteer information for a local youth baseball and softball league.",
+    "Registration, schedules, field locations, sponsors, volunteer details, and family updates for Middletown-Neshaminy Baseball.",
 };
 
 export default function RootLayout({

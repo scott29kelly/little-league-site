@@ -2,7 +2,7 @@
 
 ## Project
 
-This repository is a client-safe demo for a youth baseball league website. It should complement SportsConnect now and remain easy to adapt as PlayMetrics integration rolls out.
+This repository is a client-safe demo for a youth baseball league website. It should complement Sports Connect now and remain easy to adapt as league platform needs change.
 
 ## Stack
 

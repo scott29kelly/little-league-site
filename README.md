@@ -1,8 +1,8 @@
-# Little League Site Demo
+# Middletown-Neshaminy Baseball Site Demo
 
-Client-safe demo for a youth baseball league website that works alongside PlayMetrics and the SportsConnect transition history.
+Client-safe demo for Middletown-Neshaminy Baseball, a chartered Little League in Middletown Township, Bucks County, PA.
 
-The first goal is to show a polished public website experience for parents, sponsors, coaches, and board members without replacing the league's approved registration platform.
+The first goal is to show a polished public website experience for parents, sponsors, coaches, and board members without replacing Sports Connect, the league's approved registration platform.
 
 ## Local Development
 
@@ -16,15 +16,15 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Project Positioning
 
 - The public website should make league information easy for families to find.
-- Registration, background checks, and official league records should stay in PlayMetrics or the approved league platform.
-- The demo uses neutral placeholder branding until the client provides exact league assets.
+- Registration, background checks, and official league records should stay in Sports Connect.
+- The demo uses a league-style logo, direct registration link, field names, sponsor names, and realistic placeholder photos.
 - Pricing is intentionally omitted from the repository and demo pages so nothing sensitive appears during a client screen share.
 
 ## Demo Focus
 
-- Parent actions: registration path, schedules, field status, announcements, FAQs.
+- Parent actions: homepage overview, Sports Connect registration path, schedule and fields, game-day update, photo gallery, sponsors, volunteer information, FAQs.
 - Board operations: volunteer signups, sponsor visibility, contact routing, calendar clarity.
-- Transition readiness: keep PlayMetrics links easy to update as the league receives direct registration destinations.
+- Transition readiness: keep Sports Connect links and transition copy easy to update when the league confirms final wording.
 
 ## Useful Docs
 

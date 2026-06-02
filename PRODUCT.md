@@ -10,7 +10,7 @@ Parents need fast answers about registration, schedules, fields, volunteer expec
 
 ## Product Purpose
 
-This demo presents a polished public website for a youth baseball league. It should make the league feel organized, trustworthy, and easy to join while keeping official registration and compliance workflows inside PlayMetrics or the approved league platform.
+This demo presents a polished public website for Middletown-Neshaminy Baseball. It should make the league feel organized, trustworthy, and easy to join while keeping official registration and compliance workflows inside Sports Connect.
 
 ## Brand Personality
 
@@ -22,10 +22,10 @@ Avoid cluttered league portals, generic template card grids, official marks with
 
 ## Design Principles
 
-- Put parent tasks first: registration path, schedules, field status, volunteer steps, and FAQs should be obvious.
-- Show operational maturity: the site should make the board look organized without pretending to replace the approved platform.
+- Put parent tasks first: registration path, schedules, field locations, game-day updates, volunteer steps, and FAQs should be obvious.
+- Show operational maturity: the site should make the league look organized without pretending to replace the approved platform.
 - Make sponsors feel valued: sponsor visibility should look credible and easy to explain.
-- Stay easy to update: content should be structured so names, dates, links, sponsors, and fields can be swapped quickly.
+- Stay easy to update: content should be structured so names, dates, links, sponsors, photos, and fields can be swapped quickly.
 - Use real baseball atmosphere: imagery should feel local and human, not like a generic software dashboard.
 
 ## Accessibility & Inclusion

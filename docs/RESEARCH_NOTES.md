@@ -2,18 +2,26 @@
 
 ## Platform Context
 
-- PlayMetrics announced it acquired substantially all SportsEngine assets on May 1, 2026.
-- SportsConnect's Little League page says Little League registration, operations, and volunteer management will move to PlayMetrics beginning with the 2027 season.
-- PlayMetrics support says parent registration can start from a club-provided registration URL, and the PlayMetrics website includes a "Find My Organization" flow.
+- Middletown-Neshaminy Baseball currently uses Sports Connect for public registration.
+- Sports Connect should remain the system of record for registration, waivers, family accounts, and official league records.
+- The public site should keep the registration destination easy to update.
+
+## Navigation Pattern
+
+Live youth-sports sites commonly use direct parent-facing labels such as Registration, Schedules, Field Locations, Sponsors, Volunteer, Gallery, FAQ, and Contact. For this demo, the clearest structure is:
+
+- Registration
+- Schedule & Fields
+- Gallery
+- Sponsors
+- FAQ
 
 ## Source Links
 
-- [PlayMetrics acquisition announcement](https://home.playmetrics.com/blog/playmetrics-acquires-sportsengine-from-versant)
-- [PlayMetrics registration support article](https://help.playmetrics.com/hc/en-us/articles/360019972314-Registering-with-PlayMetrics)
-- [PlayMetrics find my organization](https://playmetrics.com/find-my-club)
-- [SportsConnect Little League page](https://sportsconnect.com/little-league/)
+- [Middletown-Neshaminy registration](https://leagues.bluesombrero.com/Default.aspx?tabid=2112957)
+- [Sports Connect Little League page](https://sportsconnect.com/little-league/)
 - [Little League local website policy](https://www.littleleague.org/playing-rules/position-policy-statements/websites/)
 
 ## Product Implication
 
-The demo should avoid building custom registration. The safer path is a polished public website that points families into PlayMetrics and keeps the destination easy to update when the board provides a direct program registration URL.
+The demo should avoid building custom registration or a real-time field-availability system. The safer path is a polished public website that points families into Sports Connect, shows one admin-updated game-day notice, and provides field-location details families can reference.
