@@ -10,6 +10,9 @@ import {
   leagueName,
   registrationLink,
   serviceAreas,
+  travelBaseballCards,
+  travelBaseballSummary,
+  updateChannelNote,
   wildBaseballFacebookUrl,
 } from "../_data/league-content";
 import { Icon } from "../_components/Icon";
@@ -28,6 +31,7 @@ export default function AboutPage() {
       <SiteHeader />
       <AboutHero />
       <MissionSection />
+      <TravelBaseballSection />
       <BoardSection />
       <ContactSection />
       <SiteFooter />
@@ -128,6 +132,65 @@ function MissionSection() {
             serves families across the nearby Middletown Township community.
           </p>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function TravelBaseballSection() {
+  return (
+    <section className="bg-field-soft px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-field">
+              Travel baseball
+            </p>
+            <h2 className="mt-4 font-display text-6xl leading-[0.9] text-navy sm:text-7xl">
+              MN Wild Baseball.
+            </h2>
+            <p className="mt-6 text-lg font-semibold leading-8 text-navy/72">
+              {travelBaseballSummary}
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-action px-6 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-action-dark"
+                href={wildBaseballFacebookUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                MN Wild Facebook
+              </a>
+              <a
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-field/24 bg-white px-6 text-sm font-extrabold text-field transition hover:-translate-y-0.5"
+                href={facebookUrl}
+                rel="noreferrer"
+                target="_blank"
+              >
+                MAA Facebook
+              </a>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {travelBaseballCards.map((item) => (
+              <article
+                className="rounded-[1.25rem] bg-white p-6 shadow-[0_16px_45px_oklch(20%_0.04_253_/_0.08)]"
+                key={item.title}
+              >
+                <Icon name="diamond" className="h-8 w-8 text-action" />
+                <h3 className="mt-6 text-xl font-black text-navy">
+                  {item.title}
+                </h3>
+                <p className="mt-3 leading-7 text-muted">{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-8 rounded-[1.25rem] bg-white px-5 py-4 text-sm font-extrabold leading-6 text-navy shadow-[0_12px_35px_oklch(20%_0.04_253_/_0.08)]">
+          {updateChannelNote}
+        </p>
       </div>
     </section>
   );

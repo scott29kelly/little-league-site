@@ -9,6 +9,7 @@ import {
   registrationLink,
   seasonDates,
   seasonTimelineCaption,
+  updateChannelNote,
 } from "../_data/league-content";
 
 export const metadata: Metadata = {
@@ -165,10 +166,16 @@ function FieldLocationsSection() {
             </h2>
             <p className="mt-5 max-w-2xl text-lg font-semibold leading-8 text-muted">
               Use these locations for planning. Teams should always confirm
-              exact field assignments with their coach or posted schedule.
+              exact field assignments with their coach or posted schedule. For
+              final same-day field status, check coach messages and official
+              league channels.
             </p>
           </div>
         </div>
+
+        <p className="mt-8 rounded-[1.25rem] bg-field-soft px-5 py-4 text-sm font-extrabold leading-6 text-navy">
+          {updateChannelNote}
+        </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {fieldLocations.map((field) => (

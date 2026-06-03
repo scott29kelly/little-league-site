@@ -6,6 +6,7 @@ import { SiteHeader } from "../_components/SiteHeader";
 import {
   divisions,
   registrationCards,
+  registrationChannelNote,
   registrationLink,
   registrationStatus,
   registrationSteps,
@@ -23,6 +24,7 @@ export default function RegistrationPage() {
       <SiteHeader />
       <RegistrationHero />
       <RegistrationChecklist />
+      <RegistrationChannelNote />
       <DivisionGuide />
       <SiteFooter />
     </main>
@@ -134,6 +136,31 @@ function RegistrationChecklist() {
               <p className="mt-3 leading-7 text-muted">{item.copy}</p>
             </article>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function RegistrationChannelNote() {
+  return (
+    <section className="px-4 pb-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl rounded-[1.5rem] bg-field-soft p-6 text-navy sm:p-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-start">
+          <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-white text-field">
+            <Icon name="megaphone" className="h-7 w-7" />
+          </span>
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-field">
+              Registration updates
+            </p>
+            <h2 className="mt-2 text-2xl font-black">
+              Watch official league channels.
+            </h2>
+            <p className="mt-3 max-w-4xl font-semibold leading-7 text-navy/72">
+              {registrationChannelNote}
+            </p>
+          </div>
         </div>
       </div>
     </section>

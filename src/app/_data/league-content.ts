@@ -105,6 +105,11 @@ export type LeagueUpdate = {
   isExternal?: boolean;
 };
 
+export type TravelBaseballCard = {
+  title: string;
+  copy: string;
+};
+
 export type BoardMember = {
   name: string;
   role: string;
@@ -179,8 +184,8 @@ export const leagueUpdates: LeagueUpdate[] = [
   {
     title: "Tryout updates",
     label: "Travel baseball",
-    copy: "Travel tryout dates, times, and locations are announced through the league Facebook page and league email.",
-    href: facebookUrl,
+    copy: "MN Wild Baseball tryout dates, times, and locations are announced through league email and the travel baseball Facebook page.",
+    href: wildBaseballFacebookUrl,
     isExternal: true,
   },
   {
@@ -231,7 +236,7 @@ export const registrationCards: RegistrationCard[] = [
   },
   {
     title: "Finish payment",
-    copy: "A player is not rostered until the Sports Connect registration and payment steps are complete.",
+    copy: "A player is not rostered until the Sports Connect registration and payment steps are complete. If walk-up registration or alternate payment arrangements are offered, the league will announce those dates through official channels.",
   },
 ];
 
@@ -247,6 +252,30 @@ export const registrationSteps: RegistrationCard[] = [
   {
     title: "Watch for league follow-up",
     copy: "Families receive evaluation details, tryout updates, team placement notes, and coach messages from the league.",
+  },
+];
+
+export const registrationChannelNote =
+  "Most families complete registration online in Sports Connect. If the league offers walk-up registration or alternate payment arrangements, those dates will be announced through league email, the MAA Facebook page, or the MN Wild Baseball Facebook page.";
+
+export const updateChannelNote =
+  "Tryout announcements, walk-up registration options, weather notes, and travel baseball updates are shared through league email and Facebook. Use coach messages for final team-specific details.";
+
+export const travelBaseballSummary =
+  "MN Wild Baseball is the travel baseball arm for players ready for a more competitive schedule beyond the in-house season.";
+
+export const travelBaseballCards: TravelBaseballCard[] = [
+  {
+    title: "Tryout-based teams",
+    copy: "Travel teams are selected through age-group tryouts. Tryout dates, times, locations, and coach follow-up are announced by league email and the MN Wild Baseball Facebook page.",
+  },
+  {
+    title: "Typical schedule",
+    copy: "Travel team schedules vary by age group and tournament calendar. Practices are typically midweek, and games may be scheduled on Fridays and/or Sundays. Coaches confirm final team schedules.",
+  },
+  {
+    title: "Competitive play",
+    copy: "MN Wild teams may participate in competitive travel leagues and tournament events outside the in-house schedule. Coaches share age-group-specific details after tryouts and roster placement.",
   },
 ];
 
@@ -304,6 +333,13 @@ export const divisions: Division[] = [
     ages: "Ages 15 & 16",
     summary: "A 60-90 field experience for players continuing through the older youth level.",
   },
+  {
+    name: "Travel / MN Wild",
+    ages: "Tryout-based",
+    practices: "Typically midweek",
+    games: "Often Friday and/or Sunday",
+    summary: "Competitive travel teams selected by tryout, with final schedules confirmed by coaches for each age group.",
+  },
 ];
 
 export const fieldLocations: FieldLocation[] = [
@@ -314,7 +350,14 @@ export const fieldLocations: FieldLocation[] = [
     parking: "Use the main MAA parking areas and follow posted field signs.",
     mapHref:
       "https://www.google.com/maps/dir//Middletown+Athletic+Association,+2897+Trenton+Rd,+Levittown,+PA",
-    fields: ["Dunkin", "Rookies", "Majors", "Babe Ruth", "Minors"],
+    fields: [
+      "Dunkin",
+      "Rookies",
+      "MAA Rookies",
+      "Majors",
+      "Babe Ruth",
+      "Minors",
+    ],
   },
   {
     name: "Walter Miller Elementary",
@@ -372,7 +415,7 @@ export const fieldLocations: FieldLocation[] = [
   {
     name: "Dunkin Field",
     address: "2897 Trenton Road, Levittown, PA 19057",
-    details: "Field at the MAA complex used for younger baseball activity.",
+    details: "Field at the MAA complex used for younger baseball activity and listed separately when schedules call out Dunkin Field.",
     parking: "Use the main MAA parking areas and follow posted field signs.",
     mapHref:
       "https://www.google.com/maps/dir//Middletown+Athletic+Association,+2897+Trenton+Rd,+Levittown,+PA",
