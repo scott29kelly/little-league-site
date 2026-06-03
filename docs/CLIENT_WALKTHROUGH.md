@@ -23,7 +23,7 @@ Use this as a short screen-share path for the Middletown-Neshaminy Baseball demo
    "Parents can jump straight to registration, schedule and fields, the current game-day update, or volunteer information."
 
 3. Show the game-day update.
-   "This is intentionally simple. A website admin can update whether today's games are still on, while coaches handle team-specific changes."
+   "This is intentionally simple. A website admin can update whether this week's games are still on, while coaches handle team-specific changes."
 
 4. Open schedule and fields.
    "This page combines season milestones, divisions, and field-location details. It avoids pretending the website can make field-use decisions across different locations."
