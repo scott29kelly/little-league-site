@@ -499,8 +499,6 @@ export const sponsors: Sponsor[] = [
 ];
 
 export const sponsorInquiryHref = `mailto:${associationContactEmail}?subject=Middletown-Neshaminy%20Baseball%20sponsor%20inquiry`;
-export const sponsorOpportunityFormHref =
-  "https://dt5602vnjxv0c.cloudfront.net/portals/83299/docs/2025%20maa%20sponsorship%20opportunities.pdf";
 
 export const sponsorRecognitionOptions: SponsorOpportunity[] = [
   {

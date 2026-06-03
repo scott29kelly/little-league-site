@@ -58,11 +58,11 @@ export function SiteHeader() {
 
       <nav
         aria-label="Main pages"
-        className="scrollbar-none flex gap-2 overflow-x-auto px-4 pb-3 sm:px-6 lg:hidden"
+        className="flex flex-wrap gap-2 px-4 pb-3 sm:px-6 lg:hidden"
       >
         {siteNavItems.map((item) => (
           <Link
-            className="shrink-0 rounded-full border border-white/14 bg-white/8 px-4 py-2 text-sm font-extrabold text-white/82 transition hover:bg-white/14 hover:text-white"
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/14 bg-white/8 px-4 py-2 text-sm font-extrabold text-white/86 transition hover:bg-white/14 hover:text-white"
             href={item.href}
             key={item.href}
           >

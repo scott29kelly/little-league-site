@@ -71,7 +71,6 @@ Details intentionally not copied:
 - [Little League local website policy](https://www.littleleague.org/playing-rules/position-policy-statements/websites/)
 - [MAA sponsorship opportunities](https://leagues.bluesombrero.com/Default.aspx?tabid=2112918)
 - [Current sponsor listing](https://leagues.bluesombrero.com/Default.aspx?tabid=2113123)
-- [MAA downloadable sponsorship form](https://dt5602vnjxv0c.cloudfront.net/portals/83299/docs/2025%20maa%20sponsorship%20opportunities.pdf)
 
 ## Product Implication
 

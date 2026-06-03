@@ -5,7 +5,6 @@ import { SiteFooter } from "../_components/SiteFooter";
 import { SiteHeader } from "../_components/SiteHeader";
 import {
   sponsorInquiryHref,
-  sponsorOpportunityFormHref,
   sponsorRecognitionOptions,
   sponsors,
   volunteerRoles,
@@ -110,12 +109,10 @@ function SponsorshipOpportunitiesSection() {
               Start a Sponsor Inquiry
             </a>
             <a
-              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/24 px-7 text-base font-extrabold text-white transition hover:-translate-y-0.5 hover:border-white/45"
-              href={sponsorOpportunityFormHref}
-              rel="noreferrer"
-              target="_blank"
+              className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/24 px-7 text-base font-extrabold text-white transition hover:-translate-y-0.5 hover:border-white/45 hover:bg-white/8"
+              href={sponsorInquiryHref}
             >
-              Download Form
+              Email Sponsor Director
             </a>
           </div>
         </div>
